@@ -29,11 +29,7 @@ export TRANSFORMERS_CACHE="$SCRATCH/.cache/transformers"
 
 mkdir -p "$HF_HOME" "$EVALUATE_CACHE_DIR" "$TRANSFORMERS_CACHE"
 
-module purge
-module load cuda
-module load anaconda
 
-conda activate NLP4Culture-gpt4-books
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/nccl/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
 cd /projects/$USER/NLP4Culture-gpt4-books/scripts

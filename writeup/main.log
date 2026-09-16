@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  16 SEP 2026 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  16 SEP 2026 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,13 +448,13 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 [2]
 
 [3]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 18
-7.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 21
+3.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 187.
+(Font)              scaled to size 12.0pt on input line 213.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -476,11 +476,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12613 strings out of 473190
- 197322 string characters out of 5715801
+ 12622 strings out of 473190
+ 197397 string characters out of 5715801
  630590 words of memory out of 5000000
  35549 multiletter control sequences out of 15000+600000
- 584336 words of font info for 150 fonts, out of 8000000 for 9000
+ 584711 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,6n,79p,1001b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
@@ -488,7 +488,7 @@ a-zi4r.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr
 /local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (5 pages, 59504 bytes).
+Output written on main.pdf (5 pages, 60176 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream
