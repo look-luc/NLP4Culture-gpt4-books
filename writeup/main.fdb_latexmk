@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1789579107.56811 "main.aux" "main.bbl" "main" 1789585234.85843 0
+["bibtex main"] 1789585748.05231 "main.aux" "main.bbl" "main" 1789586118.56603 0
   "./custom.bib" 1789579105.93629 1211 2cde25ce65cd8579e6000361e955ff5f ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1789585234.49152 631 9ba1fd1718515423ef37a933da641170 "pdflatex"
+  "main.aux" 1789586118.22452 631 4690d4b1c97e99803cc5b925ed3dbff7 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1789585233.57399 "main.tex" "main.pdf" "main" 1789585234.85866 0
+["pdflatex"] 1789586117.28847 "main.tex" "main.pdf" "main" 1789586118.56626 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc" 1558214095 7631 5169ff1acd97ff1c4ab83563c99f96f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -37,6 +37,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm" 1136768653 520 82a3d37183f34b6eb363a161dfc002c2 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1136768653 520 4889cce2180234b97cad636b6039c722 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm" 1136768653 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb" 1558214095 55526 184de5d68af8c544d6d1653244a2b006 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136849748 35941 f27169cc74234d5bd5e4cca5abafaabb ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb" 1136849748 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
@@ -115,10 +116,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1769366432 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "main.aux" 1789585234.49152 631 9ba1fd1718515423ef37a933da641170 "pdflatex"
-  "main.bbl" 1789579107.65214 1627 6b9e60b7c4e826bfeeb8281c8ddaf845 "bibtex main"
-  "main.out" 1789585234.18593 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1789585233.00198 689 3d6b2a68a130e5df33cf925ab88aaa66 ""
+  "main.aux" 1789586118.22452 631 4690d4b1c97e99803cc5b925ed3dbff7 "pdflatex"
+  "main.bbl" 1789585748.20675 1627 6b9e60b7c4e826bfeeb8281c8ddaf845 "bibtex main"
+  "main.out" 1789586117.90974 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1789586115.43701 8857 e223837cb73f5e9cb509ddd323da9213 ""
   (generated)
   "main.aux"
   "main.log"
