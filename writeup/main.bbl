@@ -1,0 +1,31 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Qwen Team}(2024)]{qwen2.5}
+{Qwen Team}.
+\newblock Qwen2.5: A party of foundation models, September 2024.
+\newblock URL \url{https://qwenlm.github.io/blog/qwen2.5/}.
+
+\bibitem[Yang et~al.(2024)Yang, Yang, Hui, Zheng, Yu, Zhou, Li, Li, Liu, Huang,
+  Dong, Wei, Lin, Tang, Wang, Yang, Tu, Zhang, Ma, Xu, Zhou, Bai, He, Lin,
+  Dang, Lu, Chen, Yang, Li, Xue, Ni, Zhang, Wang, Peng, Men, Gao, Lin, Wang,
+  Bai, Tan, Zhu, Li, Liu, Ge, Deng, Zhou, Ren, Zhang, Wei, Ren, Fan, Yao,
+  Zhang, Wan, Chu, Liu, Cui, Zhang, and Fan]{qwen2}
+An~Yang, Baosong Yang, Binyuan Hui, Bo~Zheng, Bowen Yu, Chang Zhou, Chengpeng
+  Li, Chengyuan Li, Dayiheng Liu, Fei Huang, Guanting Dong, Haoran Wei, Huan
+  Lin, Jialong Tang, Jialin Wang, Jian Yang, Jianhong Tu, Jianwei Zhang,
+  Jianxin Ma, Jin Xu, Jingren Zhou, Jinze Bai, Jinzheng He, Junyang Lin, Kai
+  Dang, Keming Lu, Keqin Chen, Kexin Yang, Mei Li, Mingfeng Xue, Na~Ni, Pei
+  Zhang, Peng Wang, Ru~Peng, Rui Men, Ruize Gao, Runji Lin, Shijie Wang, Shuai
+  Bai, Sinan Tan, Tianhang Zhu, Tianhao Li, Tianyu Liu, Wenbin Ge, Xiaodong
+  Deng, Xiaohuan Zhou, Xingzhang Ren, Xinyu Zhang, Xipin Wei, Xuancheng Ren,
+  Yang Fan, Yang Yao, Yichang Zhang, Yu~Wan, Yunfei Chu, Yuqiong Liu, Zeyu Cui,
+  Zhenru Zhang, and Zhihao Fan.
+\newblock {Qwen2 Technical Report}.
+\newblock \emph{arXiv preprint arXiv:2407.10671}, 2024.
+
+\end{thebibliography}

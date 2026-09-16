@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
 #SBATCH --time=5:30:00
-#SBATCH --output=/projects/%u/french-clear-speech/logs/%j.log
+#SBATCH --output=/projects/%u/NLP4Culture-gpt4-books/logs/%j.log
 #SBATCH --job-name=french_clear_speech
 #SBATCH --partition=blanca-clearlab2
 #SBATCH --account=blanca-clearlab2
@@ -36,9 +36,15 @@ module load anaconda
 conda activate NLP4Culture-gpt4-books
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/nccl/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
-cd /projects/$USER/NLP4Culture-gpt4-books
+cd /projects/$USER/NLP4Culture-gpt4-books/scripts
 
 python3 -u openai_predict_name_cloze.py
+echo "Running cloze file for qwen 2.5-3B-Instruct"
 python3 -u openai_predict_literary_time.py
+echo "Running literary time file for qwen 2.5-3B-Instruct"
+
+cd /projects/$USER/NLP4Culture-gpt4-books/generate_name_cloze
 python3 -u run_booknlp.py
+echo "Running run booknlp file"
 python3 -u create_name_cloze_from_booknlp.py
+echo "Running name cloze from booknlp booknlp file"

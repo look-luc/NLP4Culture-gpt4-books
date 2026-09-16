@@ -1,17 +1,23 @@
 \documentclass[12pt]{article}
+\usepackage[round]{natbib}
 \usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{setspace}
-\usepackage{cite}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{inconsolata}
+\usepackage{microtype}
+\usepackage{hyperref}
 
 \begin{document}
 	\singlespacing
 	\setlength{\parindent}{36pt}
-	I used the code from the github repo from Bamman. Instead of using OpenAI, I tested a Qwen model. Specifically Qwen2.5-7B-Instruct \cite{qwen2; qwen2.5}
+	I used the code from the github repo from Bamman. Instead of using OpenAI, I tested a Qwen model. Specifically Qwen2.5-7B-Instruct \citep{qwen2,qwen2.5}.
 
-	\bibliographystyle{apa}
+	\bibliographystyle{plainnat} % Added bibliography style
 	\bibliography{custom}
 \end{document}
