@@ -2,7 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 def predict(passage):
-    model_name = "Qwen/Qwen2.5-7B-Instruct"
+    model_name = "Qwen/Qwen2.5-3B-Instruct"
     text="""Read the following passage of fiction. Then do five things.
 
     1: Briefly summarize the passage.

@@ -1,47 +1,55 @@
-import openai
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
-API_ORG = ""
-API_KEY = ""
-
-openai.organization = API_ORG
-openai.api_key = API_KEY
 
 def predict(passage):
-  text="""You have seen the following passage in your training data. What is the proper name that fills in the [MASK] token in it?  This name is exactly one word long, and is a proper name (not a pronoun or any other word). You must make a guess, even if you are uncertain.   
+    model_name = "Qwen/Qwen2.5-3B-Instruct"
+    text="""You have seen the following passage in your training data. What is the proper name that fills in the [MASK] token in it?  This name is exactly one word long, and is a proper name (not a pronoun or any other word). You must make a guess, even if you are uncertain.
 
-  Example:
+    Example:
 
-  Input: "Stay gold, [MASK], stay gold."
-  Output: <name>Ponyboy</name>
+    Input: "Stay gold, [MASK], stay gold."
+    Output: <name>Ponyboy</name>
 
-  Input: "The door opened, and [MASK], dressed and hatted, entered with a cup of tea."
-  Output: <name>Gerty</name>
+    Input: "The door opened, and [MASK], dressed and hatted, entered with a cup of tea."
+    Output: <name>Gerty</name>
 
-  Input: %s
-  Output: 
+    Input: %s
+    Output:
 
-""" % passage
+    """ % passage
 
-  completion = openai.ChatCompletion.create(
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        torch_dtype="auto",
+        device_map="auto"
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    # ChatGPT
-    model="gpt-3.5-turbo",
+    messages = [
+        {"role": "user", "content": text}
+    ]
 
-    # GPT-4
-    # model="gpt-4",
+    formatted_prompt = tokenizer.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True
+    )
+    model_inputs = tokenizer([formatted_prompt], return_tensors="pt").to(model.device)
 
-    messages=[
-      {"role": "user", "content": text}
-    ],
-    temperature=0.0
-  )
+    generated_ids = model.generate(
+        **model_inputs,
+        max_new_tokens=512
+    )
+    generated_ids = [
+        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+    ]
 
-  return completion["choices"][0]["message"]["content"], completion
+    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+
+    results = [output.outputs[0].text for output in response]
+
+    return results
 
 
 passage="Wow. I sit down, fish the questions from my backpack, and go through them, inwardly cursing [MASK] for not providing me with a brief biography. I know nothing about this man I’m about to interview. He could be ninety or he could be thirty."
 content, full=predict(passage)
 print(content)
 print(full)
-
-
