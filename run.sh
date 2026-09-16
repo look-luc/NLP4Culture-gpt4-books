@@ -44,7 +44,15 @@ echo "Running cloze file for qwen 2.5-3B-Instruct"
 python3 -u openai_predict_name_cloze.py
 
 cd /projects/$USER/NLP4Culture-gpt4-books/generate_name_cloze
+
+INPUT_FILE="11231_bartleby.txt"
+OUTPUT_ID="11231_bartleby"
+
 echo "Running run booknlp file"
-python3 -u run_booknlp.py
-echo "Running name cloze from booknlp booknlp file"
-python3 -u create_name_cloze_from_booknlp.py
+python3 -u run_booknlp.py "$INPUT_FILE" "$OUTPUT_ID"
+
+echo "Running name cloze from booknlp file"
+python3 -u create_name_cloze_from_booknlp.py \
+    "booknlp_output/${OUTPUT_ID}/${OUTPUT_ID}.entities" \
+    "booknlp_output/${OUTPUT_ID}/${OUTPUT_ID}.tokens" \
+    > "booknlp_output/${OUTPUT_ID}/${OUTPUT_ID}.name_cloze.txt"

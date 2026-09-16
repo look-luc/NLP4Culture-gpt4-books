@@ -16,12 +16,15 @@
 \begin{document}
     \singlespacing
     \setlength{\parindent}{36pt}
+    \section*{Background}
     I forked the code from Bamman's github repo from Bamman. Instead of using
     OpenAI, I tested a Qwen model. Specifically Qwen2.5-7B-Instruct \citep{qwen2,qwen2.5}.
     Done due to the cost of using the openAI API and testing another popular open
-    sourced model to check if it is being memorizing copyrighted books. I have
-    kept the source code the same except the lines to load the model. The prompt used
-    is the same:
+    sourced model to check if it is being memorizing copyrighted books.
+
+    \subsection*{Methodology}
+    I have kept the source code the same except the lines to load the model. The
+    prompt used is the same:
     \begin{quote}
         Read the following passage of fiction. Then do five things.
 
@@ -144,7 +147,8 @@
         Output:
     \end{quote}
 
-    The passage used is the same as the source code and not changed for the model:
+    The passage used is the same as the source code and not changed for the
+    model:
     \begin{quotation}
         The cop looks worshipful. An elderly woman, easing heavy shopping bags to
         the floor, inquires reverently into the stock of religious materials. But
@@ -172,10 +176,58 @@
         he could be thirty.
     \end{quotation}
 
-    There were three different scripts provided that used a model: predict the
-    literary time, predict the name cloze, and predict the year. I only ran the first
-    two options. The booknlp sections from the paper were provided in the repo
-    and ran both source code with none changed.
+    There were three different scripts provided that used a model: predict the literary
+    time, predict the name cloze, and predict the year. I only ran the first two
+    options. The booknlp sections from the paper were provided in the repo and ran
+    both source code with none changed.
+
+    \section*{Results}
+    For the literary time I got the following
+    \begin{quotation}
+        Output: <name>Mr.</name> ['Output:``\verb|\n|''<name>Mr.</name>']
+    \end{quotation}
+
+    \noindent
+    For the cloze task, the following is the result:
+    \begin{quotation}
+        1: A woman asks questions about religious materials, a student comes seeking
+        esoteric titles, and another person volunteers insights—then the
+        narrator buys books to observe her.
+
+        2: The passage describes interactions between the woman and customers,
+        but does not provide specific details about the duration of these
+        interactions. The woman's questioning, the student's inquiries, and the other
+        person's revelations seem to happen quickly, but without clear
+        indicators of time passing, it's difficult to pinpoint a specific timeframe.
+        The customer buying books to observe her does not indicate a specific
+        period of time either.
+
+        3: Given the lack of specific timing details, and the fact that the
+        interactions seem brief, I will estimate a combined time of approximately
+        5 minutes. This is a low-confidence estimate due to the ambiguity of the
+        descriptions.
+
+        4: 5 minutes.
+
+        5: Low certainty, due to the vagueness of the descriptions and the difficulty
+        in accurately estimating the passage of time from the given information.
+        ["1: A woman asks questions about religious materials, a student comes
+        seeking esoteric titles, and another person volunteers insights—then the narrator
+        buys books to observe her.\verb|\n|\verb|\n|2: The passage describes
+        interactions between the woman and customers, but does not provide specific
+        details about the duration of these interactions. The woman's
+        questioning, the student's inquiries, and the other person's revelations
+        seem to happen quickly, but without clear indicators of time passing, it's
+        difficult to pinpoint a specific timeframe. The customer buying books to observe
+        her does not indicate a specific period of time either. \verb|\n|\verb|\n|3:
+        Given the lack of specific timing details, and the fact that the
+        interactions seem brief, I will estimate a combined time of approximately
+        5 minutes. This is a low-confidence estimate due to the ambiguity of the
+        descriptions.\verb|\n|\verb|\n|4: 5 minutes.\verb|\n|\verb|\n|5: Low
+        certainty, due to the vagueness of the descriptions and the difficulty in
+        accurately estimating the passage of time from the given information."]
+    \end{quotation}
+
     \newpage
     \bibliographystyle{plainnat} % Added bibliography style
     \bibliography{custom}
