@@ -74,17 +74,17 @@ def predict(passage):
 
     generated_ids = model.generate(
         **model_inputs,
-        max_new_tokens=512
+        max_new_tokens=512*3
     )
     generated_ids = [
         output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
     ]
 
-    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
 
-    results = [output.outputs[0].text for output in response]
+    content = response[0]
 
-    return results
+    return content, response
 
 
 passage="The cop looks worshipful. An elderly woman, easing heavy shopping bags to the floor, inquires reverently into the stock of religious materials. But this is only a ploy. Once answers are forthcoming, she confesses her fear that the earth has become peopled by the alien occupants of flying saucers. She looks at the shopgirl imploringly. A student comes looking for esoteric titles. He stands at attention by the counter and rattles them off. Then he lingers there, volunteering, for some reason, unabashed insights into the sources of his frustrations. The girl listens carefully. She listens to all of them. But she smiles in such a secret way that they cannot be sure she has heard. Most people buy books to pay her for her time. I buy books so 226 ELBOW ROOM I can stand at the counter and get a closer inspection of her mystery. This time I am sure her face is the source of all this interest. It is a free face, a fresh face. In it I can see no servitude to the expressions of faces I have seen before. Hers is a smile completely unaware of any predecessor. It derives entirely from within itself. Her mystery, I think, is an awareness of this liberation from the familiar. But not even her smile seems conscious of this."

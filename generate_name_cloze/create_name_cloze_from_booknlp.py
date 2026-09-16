@@ -1,6 +1,7 @@
 # Extract passages from a BookNLP-processed book where there is exactly one PROP entity (a PER), one token long.
 
-import sys, re
+import re
+import sys
 
 sids={}
 sids_start={}
@@ -47,7 +48,7 @@ def get_passage(i):
 	else:
 		endSid=sids[len(tokens)-1]
 
-	
+
 	must_include=sids[i]
 
 	cands={}
@@ -81,7 +82,7 @@ def read_toks(filename):
 		file.readline()
 		for line in file:
 			cols=line.rstrip().split("\t")
-			
+
 			sid=int(cols[1])
 			token=cols[4]
 			tid=int(cols[3])
@@ -112,7 +113,7 @@ def read_toks(filename):
 def read_ents(filename):
 
 	idd=filename.split("/")[-1]
-	idd=re.sub("\.entities$", "", idd)
+	idd=re.sub("/.entities$", "", idd)
 
 	ents={}
 
@@ -183,4 +184,4 @@ def read_ents(filename):
 
 
 read_toks(sys.argv[2])
-read_ents(sys.argv[1])				
+read_ents(sys.argv[1])

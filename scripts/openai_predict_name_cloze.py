@@ -36,17 +36,18 @@ def predict(passage):
 
     generated_ids = model.generate(
         **model_inputs,
-        max_new_tokens=512
+        max_new_tokens=512*3
     )
     generated_ids = [
         output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
     ]
 
-    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
 
-    results = [output.outputs[0].text for output in response]
+    content = response[0]
 
-    return results
+    # Return two values to unpack properly into `content, full = predict(passage)`
+    return content, response
 
 
 passage="Wow. I sit down, fish the questions from my backpack, and go through them, inwardly cursing [MASK] for not providing me with a brief biography. I know nothing about this man I’m about to interview. He could be ninety or he could be thirty."

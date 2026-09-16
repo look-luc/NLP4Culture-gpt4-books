@@ -38,13 +38,13 @@ export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/nccl/li
 
 cd /projects/$USER/NLP4Culture-gpt4-books/scripts
 
-python3 -u openai_predict_name_cloze.py
-echo "Running cloze file for qwen 2.5-3B-Instruct"
-python3 -u openai_predict_literary_time.py
 echo "Running literary time file for qwen 2.5-3B-Instruct"
+python3 -u openai_predict_literary_time.py
+echo "Running cloze file for qwen 2.5-3B-Instruct"
+python3 -u openai_predict_name_cloze.py
 
 cd /projects/$USER/NLP4Culture-gpt4-books/generate_name_cloze
-python3 -u run_booknlp.py
 echo "Running run booknlp file"
-python3 -u create_name_cloze_from_booknlp.py
+python3 -u run_booknlp.py
 echo "Running name cloze from booknlp booknlp file"
+python3 -u create_name_cloze_from_booknlp.py
